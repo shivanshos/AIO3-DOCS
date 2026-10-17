@@ -1,0 +1,36 @@
+---
+title: "Technical Stack & Lab Infrastructure"
+description: "The teaching stack and reference laboratory architecture."
+---
+
+# Reference stack
+
+AIO3's curriculum may demonstrate technical systems using a local lab. The independent **ShivanshOS / AI-OS homelab** provides an architectural reference, but should not be presented as commissioned AIO3 production infrastructure.
+
+## Candidate layers
+
+| Layer | Illustrative tools | Teachable concept |
+| --- | --- | --- |
+| Operating system | Ubuntu Linux | Users, processes, filesystem, permissions |
+| Development | Git, Python virtual environments | Source control and reproducible work |
+| Services | Docker Compose | Processes, networking and persistence |
+| Local inference | Ollama | Model serving and resource limits |
+| User interface | Open WebUI | Human-facing model interaction |
+| Orchestration | n8n | Event-driven workflows and APIs |
+| Data | PostgreSQL, vector extensions | Structured data and retrieval |
+| Robotics | Sensors and depth cameras | Perception, feedback and device interfaces |
+| Observability | Logs and resource dashboards | Reliability and debugging |
+
+Tool names are examples, not mandatory dependencies for every course.
+
+## Separation of environments
+
+Keep development, classroom demonstration and production-like services isolated. Require named owners, backups and change approval for shared devices. Never grant learners unrestricted control of infrastructure connected to private data or operational systems.
+
+## GPU and model considerations
+
+Teach memory, latency, quantization, licensing, model provenance, prompt-injection risks and evaluation. Small CPU-based or simulation alternatives should be available where specialized hardware is impractical.
+
+## Deployment maturity
+
+Before operating a classroom lab, validate device inventory, network segmentation, backups, access controls, content filtering where appropriate, incident playbooks and age-specific supervision rules.
