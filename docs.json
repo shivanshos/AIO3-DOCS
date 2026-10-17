@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "AIO3 Documentation",
+  "name": "AIO3 Docs",
   "description": "AIO3 learning, curriculum, research, mentorship, and technical lab documentation.",
   "colors": {
     "primary": "#262626",
