@@ -13,7 +13,7 @@
       {
         "group": "Getting Started",
         "pages": [
-          "index",
+          "logo/index",
           "quickstart"
         ]
       }
@@ -68,5 +68,6 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  }
+  },
+  "description": "---\n\n# AIO3 Context \n\n## Project\n\nAIO3 is building a premium AI and STEM skill-development studio focused on fundamentals, hands-on building, mentorship, and responsible technology use.\n\n## Current priorities\n\n1. Create and maintain the AIO3 knowledge vault.\n2. Establish controlled MCP access for approved AI tools.\n3. Track addons, integrations, agent capabilities, and configuration changes.\n4. Maintain durable project memory and decision records.\n\n## Working rules\n\n- Fundamentals before frameworks.\n- Understanding before automation.\n- Build, test, document, and review.\n- No unrealistic career, financial, or educational guarantees.\n- Agents must not silently modify canonical notes."
 }
