@@ -1,32 +1,37 @@
-# AIO3 Documentation
+# AIO3 Docs
 
-Documentation frontend for AIO3, powered by [Mintlify](https://mintlify.com) and maintained separately from [AIO3-Core](https://github.com/shivanshos/AIO3-Core).
+The public documentation library for AIO3, an India-first discovery-stage AI and STEM skill-development initiative focused on foundational concepts, hands-on building and responsible mentorship.
 
-## Scope
+This is the dedicated Mintlify documentation repository. The separate project repository is [AIO3-Core](https://github.com/shivanshos/AIO3-Core).
 
-This public documentation covers the AIO3 mission and principles, learner onboarding, draft learning paths, curriculum framework, technical lab safety, mentorship approach, and research methodology. AIO3 is in discovery and validation; published pages are not course enrollment promises.
+## Contents
 
-## Preview locally
+- Introduction, project concept, brand story, and educational principles
+- Brand identity and visual design system
+- Learning paths, pedagogical framework, course blueprints and learner journey
+- Business model, go-to-market strategy and discovery roadmap
+- Operations, agentic automation, technical lab and knowledge architecture
+- Research, evidence validation, safeguarding and decision governance
 
-Prerequisites: Node.js and npm.
+See [docs.json](docs.json) for the complete published navigation.
+
+## Run locally
+
+Install the Mintlify CLI and run from the repository root:
 
 ```bash
 npm install -g mint
 mint dev
 ```
 
-Run the commands from the repository root containing `docs.json`. Open the address printed by the CLI (commonly `http://localhost:3000`).
+Consult [Mintlify documentation](https://mintlify.com/docs) for CLI requirements.
 
-## Publish via Mintlify
+## Publish
 
-1. Create or open a project in [Mintlify](https://dashboard.mintlify.com).
-2. Connect GitHub and authorize access to the `shivanshos/AIO3-DOCS` repository.
-3. Select the `main` branch and repository root as documentation source.
-4. Preview the generated site, validate links and styling, then enable production publishing.
-5. Optionally configure a custom domain, such as `docs.aio3.in`, after confirming ownership and DNS settings.
+Connect this GitHub repository (branch `main`) through the [Mintlify dashboard](https://dashboard.mintlify.com). Review the preview and permissions before deploying. Domain setup, if required, follows after deployment verification.
 
-Mintlify hosting and DNS cannot be completed solely through repository commits.
+## Editorial status
 
-## Contribution workflow
+AIO3 is in discovery and validation. Documents identify established founding directions, proposals and assumptions. Proposed courses, pricing and outcome measures are not confirmed offerings. Never commit confidential information, learner data or unverified performance claims.
 
-Propose changes through branches and pull requests. Update `docs.json` when adding pages. Do not publish student data, secrets, or unverified marketing claims. See [Contributing](contributing.mdx).
+To contribute, see [Contributing](contributing.mdx).
