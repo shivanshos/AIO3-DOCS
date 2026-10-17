@@ -16,31 +16,63 @@
   "navigation": {
     "pages": [
       {
-        "group": "Start Here",
+        "group": "Introduction",
         "pages": [
           "index",
           "getting-started",
+          "concept/vision",
+          "concept/story",
           "about/principles"
         ]
       },
       {
-        "group": "Learning",
+        "group": "Brand & Design",
+        "pages": [
+          "brand/identity",
+          "brand/design-system"
+        ]
+      },
+      {
+        "group": "Learning & Curriculum",
         "pages": [
           "learning-paths",
           "curriculum/overview",
-          "mentorship/approach"
+          "curriculum/pedagogy",
+          "curriculum/course-blueprints",
+          "mentorship/approach",
+          "experience/learner-journey"
         ]
       },
       {
-        "group": "Technical Lab",
+        "group": "Business & Strategy",
         "pages": [
-          "lab/overview"
+          "strategy/business-model",
+          "strategy/go-to-market",
+          "strategy/roadmap"
         ]
       },
       {
-        "group": "Research & Collaboration",
+        "group": "Delivery & Operations",
+        "pages": [
+          "operations/delivery",
+          "operations/automation"
+        ]
+      },
+      {
+        "group": "Technical & Knowledge Systems",
+        "pages": [
+          "lab/overview",
+          "platform/technical-stack",
+          "platform/knowledge-architecture"
+        ]
+      },
+      {
+        "group": "Research & Governance",
         "pages": [
           "research/overview",
+          "research/validation",
+          "governance/safety",
+          "governance/decisions",
           "contributing"
         ]
       }
