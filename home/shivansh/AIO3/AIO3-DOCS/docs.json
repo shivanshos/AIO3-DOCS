@@ -86,7 +86,10 @@
           "brand-system/typography",
           "brand-system/components",
           "brand/identity",
-          "brand/visual-language"
+          "brand/visual-language",
+          "brand/layout",
+          "brand/accessibility",
+          "brand/applications"
         ]
       },
       {
