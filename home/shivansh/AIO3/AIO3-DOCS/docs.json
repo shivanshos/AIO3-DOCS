@@ -84,7 +84,9 @@
           "brand-system/identity",
           "brand-system/colors",
           "brand-system/typography",
-          "brand-system/components"
+          "brand-system/components",
+          "brand/identity",
+          "brand/visual-language"
         ]
       },
       {
