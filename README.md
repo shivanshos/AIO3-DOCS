@@ -1,55 +1,32 @@
-# Mintlify Starter Kit
+# AIO3 Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentation frontend for AIO3, powered by [Mintlify](https://mintlify.com) and maintained separately from [AIO3-Core](https://github.com/shivanshos/AIO3-Core).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Scope
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+This public documentation covers the AIO3 mission and principles, learner onboarding, draft learning paths, curriculum framework, technical lab safety, mentorship approach, and research methodology. AIO3 is in discovery and validation; published pages are not course enrollment promises.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+## Preview locally
 
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
+Prerequisites: Node.js and npm.
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
+npm install -g mint
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Run the commands from the repository root containing `docs.json`. Open the address printed by the CLI (commonly `http://localhost:3000`).
 
-## Publishing changes
+## Publish via Mintlify
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+1. Create or open a project in [Mintlify](https://dashboard.mintlify.com).
+2. Connect GitHub and authorize access to the `shivanshos/AIO3-DOCS` repository.
+3. Select the `main` branch and repository root as documentation source.
+4. Preview the generated site, validate links and styling, then enable production publishing.
+5. Optionally configure a custom domain, such as `docs.aio3.in`, after confirming ownership and DNS settings.
 
-## Need help?
+Mintlify hosting and DNS cannot be completed solely through repository commits.
 
-### Troubleshooting
+## Contribution workflow
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Propose changes through branches and pull requests. Update `docs.json` when adding pages. Do not publish student data, secrets, or unverified marketing claims. See [Contributing](contributing.mdx).
