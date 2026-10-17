@@ -1,0 +1,39 @@
+---
+title: "Knowledge & Platform Architecture"
+description: "How AIO3 uses GitHub, Mintlify, Drive, research tools and local infrastructure."
+---
+
+# Platform architecture
+
+AIO3 uses separate systems for public documentation, product development, raw research, and working knowledge. This document distinguishes **known project links** from **planned synchronization**.
+
+## Canonical destinations
+
+| System | Responsibility | Reference |
+| --- | --- | --- |
+| GitHub AIO3-DOCS | Public-facing documentation source | [AIO3-DOCS](https://github.com/shivanshos/AIO3-DOCS) |
+| Mintlify | Render and publish documentation | [Mintlify dashboard](https://dashboard.mintlify.com) |
+| GitHub AIO3-Core | Project code, planning and delivery artifacts | [AIO3-Core](https://github.com/shivanshos/AIO3-Core) |
+| Google Drive | Shared cloud files and collaboration | [AIO3 Drive folder](https://drive.google.com/drive/folders/1GDwVZa_IWjh-uXbGuB_LBtzU3jYzDe_R) |
+| Notion | Working planning and project knowledge | [AIO3 Notion](https://app.notion.com/p/AIO3-3fc428aeefcc807c8869d8a71669da58) |
+| Perplexity | Research and discovery workspace | [AIO3 research space](https://www.perplexity.ai/spaces/aio3-4e3skG3rRBmj7pSHgH2fBA) |
+| Obsidian | Proposed local-first knowledge vault | Location and sync policy to be confirmed |
+
+These references indicate intended ecosystem roles; access, live sync, and permissions are not independently proven for each integration.
+
+## Content workflow
+
+1. Research and brainstorm in working spaces.
+2. Record sources, assumptions and decisions.
+3. Prepare canonical pages in GitHub with review.
+4. Check privacy, accuracy, learner safety, accessibility and links.
+5. Publish through the Mintlify–GitHub connection.
+6. Record page owner, review date and changes.
+
+## Source-of-truth rule
+
+Public docs are authored in `AIO3-DOCS`. Private learner data, credentials, internal financial models and operational secrets must never be copied into this public repository.
+
+## Architecture boundaries
+
+Avoid unsupervised bidirectional sync between tools. Imported text may contain misleading or malicious instructions; review it as untrusted content. Give connectors the least permission necessary and retain exportable source files.
