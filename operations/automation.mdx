@@ -1,0 +1,34 @@
+---
+title: "Agents & Automation"
+description: "Human-supervised workflows for an efficient AIO3 operation."
+---
+
+# Automation philosophy
+
+Automate repetition, not responsibility. Agentic systems may assist with research, drafting, classification, scheduling and knowledge retrieval, but educators retain control over child safety, curriculum approval, pricing, sensitive data and external communications.
+
+## Suggested workflow candidates
+
+| Workflow | Automation role | Human checkpoint |
+| --- | --- | --- |
+| Research intake | Collect, summarize and tag candidate sources | Validate sources and claims |
+| Content production | Draft page outlines and quiz variants | Educator approves learning accuracy |
+| Lead intake | Route inquiries and send acknowledgment | Review fit and consent before outreach |
+| Scheduling | Suggest slots and confirm logistics | Mentor approves capacity |
+| Learner feedback | Organize rubric notes | Mentor writes or approves interpretation |
+| Project knowledge | Index approved documentation | Reviewer authorizes canonical edits |
+| Operations dashboard | Aggregate non-sensitive KPIs | Owner reviews anomalies |
+
+## Architecture proposal
+
+**Event → permissions check → orchestrator (for example n8n) → limited tool/agent → validation → human approval where needed → action → audit log.**
+
+Use mock data during development. Give each agent only the specific tools and credentials it needs. Prefer read-only access and short-lived credentials where available.
+
+## Prohibited shortcuts
+
+Do not let agents send unreviewed promises, ingest student records into unapproved models, change fees, publish learner work without consent, or silently rewrite governance documents.
+
+## Metrics
+
+Measure time saved, error rate, human review burden, audit completeness and real cost per workflow. Automation is valuable only if it improves total service quality or sustainable unit economics.
