@@ -1,0 +1,42 @@
+---
+title: "UI components and states"
+description: "Button, prompt composer, answer card, system states and interaction principles."
+---
+
+# Interface components
+
+The AIO3 interaction language is **precise, quiet and understandable**. Every microinteraction should reinforce the learner's confidence, not distract from the task.
+
+## Core components
+
+### Buttons
+
+- Primary, secondary and tertiary; small, medium and large.
+- Disabled state with clear context, not colour alone.
+- At least a 44 × 44 px touch target for primary mobile interactions where feasible.
+- 8 px radius as default; pill shapes for chips and brief badges.
+
+### Prompt composer
+
+- A clear input label, readable placeholder and visible submit action.
+- Keyboard submit and a multi-line composition pattern without accidental sends.
+- Loading feedback using subtle skeletons or progress indicators.
+- Error feedback with a reason and a useful retry path.
+
+### Answer and evidence card
+
+- Response, visible sources or references, follow-up actions, and honest uncertainty.
+- Source chips and distinctions between evidence, interpretation, and hypotheses.
+- Empty, loading, error, success, and partial-response states.
+
+## Layout language
+
+Cards: 16 px rounded corners. Hero surfaces: up to 24 px. Controls: 8 px. Chips: pill. Surfaces have generous whitespace, fine dividers, and shadows capped at level 3.
+
+## Motion
+
+Design durations: 100, 160, 240, 400 and 600 ms. Prefer opacity, scale and positional easing; honour `prefers-reduced-motion`. Avoid endless attention-seeking animations.
+
+## Accessibility
+
+Semantic controls, visible focus rings, keyboard access, non-colour status indicators, and motion reduction are mandatory requirements, not optional polish.

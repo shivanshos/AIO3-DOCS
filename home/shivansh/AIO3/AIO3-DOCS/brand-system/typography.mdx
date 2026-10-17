@@ -1,0 +1,28 @@
+---
+title: "Typography and language"
+description: "Nebula, Nohemi, Helvetica Neue, Sarpanch, monospaced text and licensing."
+---
+
+# Typography
+
+Keep the established type hierarchy rather than introducing unrelated display faces.
+
+| Context | Typeface | Fallback |
+|---|---|---|
+| AIO3 primary wordmark, display H1 | Nebula | Approved vector paths, then Nohemi |
+| Headings, card titles, buttons | Nohemi | Inter / system sans |
+| Body copy and interface text | Helvetica Neue | Inter / system sans |
+| Hindi / Devanagari | Sarpanch | Verified Devanagari-capable system font |
+| Code, technical IDs | JetBrains Mono | Monospace |
+
+## Type personality
+
+Headings feel bold, compact and geometrically precise. Paragraphs remain exceptionally clear, readable and restrained. Use comfortable line height and do not track body text widely to simulate a futuristic aesthetic.
+
+## Indian-language inclusion
+
+Proofread translated content by native-language reviewers. Verify Devanagari line breaking, available glyph coverage, font rendering and accessibility. Never assume a Latin-only webfont supports Hindi.
+
+<Warning>Licensing gate: the supplied Nebula build was described as personal-use only. Helvetica Neue and Nohemi may require commercial and web-embedding rights; confirm actual licence documents. Keeping font binaries private does not grant commercial web rights. Do not host font files or commit proprietary binaries without confirming permissions.</Warning>
+
+Production builds should default to safe system fallbacks until the rights are documented and reviewed.

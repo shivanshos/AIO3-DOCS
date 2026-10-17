@@ -1,0 +1,36 @@
+---
+title: "Colour System"
+description: "Full brand palette, ratios and accessible combinations."
+---
+
+## The approved palette
+
+| Token | Colour | HEX | Suggested usage |
+|---|---|---|---|
+| Off Black | Deep neutral | `#091717` | Dark canvas and text |
+| Inky Blue | Navy ink | `#13343B` | Strong UI surfaces |
+| Peacock | Dusty teal | `#2E565D` | Secondary panels |
+| True Turquoise | Primary accent | `#20808D` | Actions, emphasis and identity |
+| Bright Turquoise | Vivid teal | `#20B8CD` | Dark-mode accents |
+| Sky | Soft aqua | `#BADFDE` | Light emphasis and tint |
+| Paper White | Warm white | `#FBFAF4` | Light-mode canvas |
+| Ecru | Warm neutral | `#E5E3D4` | Dividers and quiet surfaces |
+| Apricot | Warm accent | `#FFD2A6` | Human warmth and teaching cues |
+| Terra Cotta | Warm dark | `#A94B30` | Selected annotations |
+| Boysenberry | Muted plum | `#954456` | Occasional emphasis |
+
+### Composition
+Use the **70 / 20 / 10** guidance: 70% paper/off-black surfaces, 20% turquoise family, and up to 10% warm or plum accents. This is a design composition guide, not a mandate for every UI state.
+
+### Semantic colour
+Keep semantic success, warning, error and info values distinct from the brand palette when needed, and document contrast for both themes. An accent colour alone must not encode success or failure.
+
+### Contrast
+Target WCAG AA: 4.5:1 for normal body text and 3:1 for large text and non-text UI boundaries. On dark surfaces, pair bright turquoise with off-black. Test primary action text against its actual fill rather than assuming turquoise is always accessible.
+
+### Themes
+- **Light:** `#FBFAF4` canvas, `#091717` text, True Turquoise action.
+- **Dark:** `#091717` canvas, `#FBFAF4` text, Bright Turquoise highlights.
+- **Warm presentation:** optional restrained Apricot/Terra Cotta haze behind content.
+
+Avoid unrelated neon, saturated cyberpunk gradients and high-gloss 3D.

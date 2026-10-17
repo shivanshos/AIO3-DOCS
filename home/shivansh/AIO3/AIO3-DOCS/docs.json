@@ -72,7 +72,20 @@
       },
       {
         "group": "Brand & Design System",
-        "pages": []
+        "pages": [
+          "brand/overview",
+          "brand/logo",
+          "brand/colors",
+          "brand/typography",
+          "brand/components",
+          "brand/imagery",
+          "brand/motion",
+          "brand-system/overview",
+          "brand-system/identity",
+          "brand-system/colors",
+          "brand-system/typography",
+          "brand-system/components"
+        ]
       },
       {
         "group": "Brand System",
