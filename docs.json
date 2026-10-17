@@ -1,53 +1,62 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "AIO3",
+  "name": "AIO3 Documentation",
+  "description": "AIO3 learning, curriculum, research, mentorship, and technical lab documentation.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#262626",
+    "light": "#525252",
+    "dark": "#D4D4D4"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "logo/index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Start Here",
+        "pages": [
+          "index",
+          "getting-started",
+          "about/principles"
+        ]
+      },
+      {
+        "group": "Learning",
+        "pages": [
+          "learning-paths",
+          "curriculum/overview",
+          "mentorship/approach"
+        ]
+      },
+      {
+        "group": "Technical Lab",
+        "pages": [
+          "lab/overview"
+        ]
+      },
+      {
+        "group": "Research & Collaboration",
+        "pages": [
+          "research/overview",
+          "contributing"
+        ]
+      }
+    ]
+  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "label": "GitHub",
+        "href": "https://github.com/shivanshos/AIO3-DOCS"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "AIO3 Core",
+      "href": "https://github.com/shivanshos/AIO3-Core"
     }
   },
   "contextual": {
@@ -55,19 +64,12 @@
       "copy",
       "view",
       "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/shivanshos/AIO3-DOCS"
     }
-  },
-  "description": "---\n\n# AIO3 Context \n\n## Project\n\nAIO3 is building a premium AI and STEM skill-development studio focused on fundamentals, hands-on building, mentorship, and responsible technology use.\n\n## Current priorities\n\n1. Create and maintain the AIO3 knowledge vault.\n2. Establish controlled MCP access for approved AI tools.\n3. Track addons, integrations, agent capabilities, and configuration changes.\n4. Maintain durable project memory and decision records.\n\n## Working rules\n\n- Fundamentals before frameworks.\n- Understanding before automation.\n- Build, test, document, and review.\n- No unrealistic career, financial, or educational guarantees.\n- Agents must not silently modify canonical notes."
+  }
 }
