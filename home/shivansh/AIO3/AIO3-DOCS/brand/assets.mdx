@@ -1,0 +1,106 @@
+---
+title: "Brand Assets"
+description: "Inventory of AIO3 logo, icon, pattern and template asset families, their status, locations and how to request them."
+---
+
+<Warning>
+  **Release status (as of 2026-10-18):** no canonical logo or binary artwork is published in GitHub or on this site. The asset families below describe the owner's offline source archive. The release manifest intentionally has no asset rows yet. Treat every asset as **pending verification** until it has provenance and named approval.
+</Warning>
+
+## Asset families
+
+### Logo masters
+
+| Asset | Variants | Format |
+| --- | --- | --- |
+| A3 icon (monogram) | Solid, dark, light, hollow, outline, circle, warm, maskable, monochrome black, monochrome white | SVG |
+| AIO3 wordmark (Nebula-derived) | Light surfaces, dark surfaces; real glyph outlines | SVG |
+
+Use rules: [Logo & brand mark](/brand/logo).
+
+### Application icons
+
+| Asset | Sizes / format |
+| --- | --- |
+| App icons | 16 to 512 px PNG |
+| Favicon | `favicon.ico` |
+| Apple touch icon | PNG |
+| Android maskable icon | PNG with safe area |
+
+At small sizes, use the A3 icon rather than the full wordmark. Validate legibility at 16, 24, 32, 64 and 180 px.
+
+### UI icon set
+
+24 icons, each in **outline** and **duotone** families, on a 32 px grid with a 2 px rounded stroke, delivered with a `sprite.svg`. Token sizes: 16, 20, 24 and 32 px.
+
+### Supporting graphics
+
+- Patterns: dots, asterisk, grid
+- Topographic contours
+- Node network
+- Radial glows (turquoise and apricot)
+- Photograding filters: natural, teal duotone, warm duotone, monochrome
+
+See [Imagery & graphics](/brand/imagery).
+
+### Discovered Adobe material (unverified)
+
+One Adobe Express brand exploration and four Firefly-generated backgrounds were found in the Creative Cloud account. They contain AI pseudo-text and are **not approved for publication**. See [Asset library audit](/brand/asset-production).
+
+### Templates (candidates only)
+
+Adobe Express templates for brand-guide covers, research/proposal covers and brochures have been identified as structural references. They must be recoloured with AIO3 tokens and checked for licence terms before use.
+
+## Where assets live
+
+| Location | Contents | Status |
+| --- | --- | --- |
+| Owner's offline archives (`aio3-icons`, `aio3-supporting-assets`, `aio3-brand-repo`) | Canonical vectors, rasters, fonts, backgrounds | Authoritative source, not public |
+| [AIO3-BRAND](https://github.com/shivanshos/AIO3-BRAND) (private) | Charter, tokens, manifests, provenance | Text and specifications only |
+| AIO3-DOCS `logo/*.svg` | Mintlify starter artwork | **Not** AIO3 masters |
+| AIO3-Core `mintlify/assets/` | Provisional placeholders | **Not** an import source |
+
+## Naming convention
+
+```text
+aio3-{category}-{subject}-{variant}-{theme}-{size}.{ext}
+```
+
+Examples:
+
+```text
+aio3-icon-a3-solid-light-512.png
+aio3-wordmark-primary-dark.svg
+aio3-background-nodefield-warm-dark-1920.png
+```
+
+Never rename canonical source files; apply the convention to derived exports only.
+
+## Provenance record
+
+Every released asset needs a row in `assets/RELEASE-MANIFEST.csv` with these fields:
+
+| Field | Purpose |
+| --- | --- |
+| `asset_id` | Stable identifier |
+| `original_filename` | Filename as supplied, unchanged |
+| `source_archive` | Archive the file came from |
+| `sha256` | Hash of the exact bytes |
+| `variant`, `dimensions` | What the file is |
+| `rights_evidence` | Licence or ownership proof |
+| `approved_by`, `approved_at` | Named approval |
+| `release_status` | e.g. discovered, candidate, reviewed, approved, rejected |
+| `consumer_repository`, `consumer_path`, `source_commit` | Where an approved copy is used |
+
+Missing provenance means pending, not approved.
+
+## Requesting assets
+
+1. Ask the brand owner for the specific master and variant.
+2. Confirm the intended use, size and background.
+3. Receive the file with its manifest row.
+4. Follow [Asset governance](/brand/governance) and the [Brand review checklist](/brand/review-checklist) before publishing.
+
+<Note>
+  Never fill a gap in the inventory by generating, tracing or approximating a mark. Missing vectors come from the original archive only.
+</Note>

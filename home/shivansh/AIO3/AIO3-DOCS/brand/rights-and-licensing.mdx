@@ -1,0 +1,56 @@
+---
+title: "Rights & Licensing"
+description: "Font licence status, logo provenance, imagery rights and consent requirements before any AIO3 asset is released."
+---
+
+<Warning>
+  **Status: not approved for public font distribution.** A private GitHub repository does not authorise commercial use or redistribution. A public site needs web-embedding rights to serve font files.
+</Warning>
+
+## Font status
+
+| Family | Role | Licence status |
+| --- | --- | --- |
+| Nebula | Wordmark and H1 display | Supplied as personal use only; commercial licence required |
+| Nohemi | Headings, buttons | Commercial and web-embedding terms to verify |
+| Helvetica Neue | Body copy | Commercial and web-embedding terms to verify |
+| Sarpanch | Hindi / Devanagari | SIL Open Font License; preserve licence and notices |
+| JetBrains Mono | Code | Verify bundled version and OFL notice |
+
+### Until licences are verified
+
+- Keep font binaries out of Git history and public docs.
+- Do not commit base64-embedded font copies.
+- Use the original wordmark as outlined SVG vectors, not live text.
+- Use system fallbacks in deployable CSS (see [Design tokens](/brand/tokens)).
+- Do not publish the original embedded-font presentation page.
+- Store licence proof and seat or web limits in private purchase records, not public Git.
+
+## Logo provenance
+
+- Only the A3 and Nebula-derived wordmark vectors from the original archive are canonical.
+- Verify each file byte-for-byte (SHA-256) before import.
+- Mintlify starter `logo/*.svg` files and AIO3-Core placeholders are not AIO3 masters.
+
+## Imagery rights
+
+| Source | Requirement |
+| --- | --- |
+| Own photography | Record photographer, date and usage rights |
+| Identifiable minors | Guardian consent, privacy review and separate approval |
+| Real people | Written permission for recognisable likenesses |
+| Stock | Licence covering the intended use |
+| AI-generated | Label in the catalogue; check derivative terms; never present as documentary |
+| Templates | Confirm free or premium entitlement before adapting |
+
+## Privacy
+
+Never publish Adobe library or brand-kit invitation URLs, private source links, or internal asset identifiers in public documentation.
+
+## Release checklist
+
+- Owner-approved licence evidence
+- Web font permission and usage scope
+- Logo provenance recorded
+- Legible fallbacks in place
+- Security and accessibility review complete

@@ -69,19 +69,48 @@
         "group": "Brand & Design System",
         "pages": [
           "brand/overview",
-          "brand/logo",
-          "brand/colors",
-          "brand/typography",
-          "brand/components",
-          "brand/imagery",
-          "brand/motion",
-          "brand/identity",
-          "brand/visual-language",
-          "brand/layout",
-          "brand/accessibility",
-          "brand/applications",
-          "brand/governance",
-          "brand/asset-production"
+          "brand/at-a-glance",
+          {
+            "group": "Concept & Strategy",
+            "pages": [
+              "brand/concept",
+              "brand/identity",
+              "brand/strategy",
+              "brand/voice-and-messaging"
+            ]
+          },
+          {
+            "group": "Visual Identity",
+            "pages": [
+              "brand/logo",
+              "brand/colors",
+              "brand/typography",
+              "brand/visual-language",
+              "brand/imagery",
+              "brand/layout",
+              "brand/motion"
+            ]
+          },
+          {
+            "group": "Design System",
+            "pages": [
+              "brand/tokens",
+              "brand/components",
+              "brand/accessibility",
+              "brand/applications"
+            ]
+          },
+          {
+            "group": "Brand Assets",
+            "pages": [
+              "brand/assets",
+              "brand/asset-production",
+              "brand/generative-ai",
+              "brand/rights-and-licensing",
+              "brand/governance",
+              "brand/review-checklist"
+            ]
+          }
         ]
       },
       {

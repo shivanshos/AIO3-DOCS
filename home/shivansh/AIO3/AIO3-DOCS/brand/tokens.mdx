@@ -1,0 +1,119 @@
+---
+title: "Design Tokens"
+description: "AIO3 colour, semantic theme, radius, motion, icon and typography tokens with CSS variables."
+---
+
+Tokens are the implementation source for every AIO3 interface. They come from `tokens/brand.json` and `tokens/semantic.css` in the private [AIO3-BRAND repository](https://github.com/shivanshos/AIO3-BRAND). Components must use tokens, never hard-coded values, and no token may silently redefine the canonical palette.
+
+## Colour
+
+```json brand.json
+{
+  "color": {
+    "offBlack": "#091717",
+    "inkyBlue": "#13343B",
+    "peacock": "#2E565D",
+    "trueTurquoise": "#20808D",
+    "brightTurquoise": "#20B8CD",
+    "sky": "#BADFDE",
+    "paperWhite": "#FBFAF4",
+    "ecru": "#E5E3D4",
+    "apricot": "#FFD2A6",
+    "terraCotta": "#A94B30",
+    "boysenberry": "#954456"
+  }
+}
+```
+
+## Semantic themes
+
+| Role | Light | Dark |
+| --- | --- | --- |
+| background | `#FBFAF4` | `#091717` |
+| text | `#13343B` | `#FBFAF4` |
+| accent | `#20808D` | `#20B8CD` |
+| surface | `#FFFFFF` | `#13343B` |
+| focus | `#20808D` | `#20B8CD` |
+
+## Radius
+
+| Token | Value | Use |
+| --- | --: | --- |
+| none | 0 | Hard edges |
+| xs | 4 px | Small inline elements |
+| sm | 8 px | Controls and buttons |
+| md | 12 px | Intermediate surfaces |
+| lg | 16 px | Cards |
+| xl | 24 px | Hero surfaces |
+| pill | 999 px | Chips and badges |
+
+## Motion
+
+| Token | Duration |
+| --- | --: |
+| instant | 100 ms |
+| fast | 160 ms |
+| base | 240 ms |
+| slow | 400 ms |
+| stream | 600 ms |
+
+Standard easing: `cubic-bezier(.2,0,0,1)`. See [Motion & effects](/brand/motion) for the full easing set.
+
+## Icons
+
+Grid 32 px, stroke 2 px, sizes 16 / 20 / 24 / 32 px.
+
+## Typography stacks
+
+| Role | Stack |
+| --- | --- |
+| display | Nebula, Nohemi, sans-serif |
+| heading | Nohemi, Inter, sans-serif |
+| body | Helvetica Neue, Inter, Arial, sans-serif |
+| devanagari | Sarpanch, Noto Sans Devanagari, sans-serif |
+| code | JetBrains Mono, monospace |
+
+Until web licences are verified, deployable builds use the fallback fonts. See [Rights & licensing](/brand/rights-and-licensing).
+
+## CSS variables
+
+```css semantic.css
+:root {
+  --aio3-bg: #FBFAF4;
+  --aio3-text: #13343B;
+  --aio3-surface: #FFFFFF;
+  --aio3-accent: #20808D;
+  --aio3-focus: #20808D;
+  --aio3-radius-control: 8px;
+  --aio3-radius-card: 16px;
+  --aio3-radius-hero: 24px;
+  --aio3-dur-fast: 160ms;
+  --aio3-dur-base: 240ms;
+  --aio3-dur-stream: 600ms;
+  --aio3-ease-standard: cubic-bezier(.2,0,0,1);
+}
+
+[data-theme="dark"] {
+  --aio3-bg: #091717;
+  --aio3-text: #FBFAF4;
+  --aio3-surface: #13343B;
+  --aio3-accent: #20B8CD;
+  --aio3-focus: #20B8CD;
+}
+
+:focus-visible {
+  outline: 2px solid var(--aio3-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+```
+
+<Note>
+  Tokens are reference specifications, not a published npm package or Storybook. Version and test any package before release.
+</Note>
