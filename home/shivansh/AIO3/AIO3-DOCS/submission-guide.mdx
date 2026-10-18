@@ -1,0 +1,217 @@
+Use this guide when you add a new page, upload a file or image, or propose changes to AIO3 documentation. For the review process, see [Contributing](/contributing).
+
+## Repositories
+
+| Repository | Purpose | Visibility |
+| --- | --- | --- |
+| [shivanshos/AIO3-DOCS](https://github.com/shivanshos/AIO3-DOCS) | Source of truth for this documentation site | Public |
+| [shivanshos/AIO3-Core](https://github.com/shivanshos/AIO3-Core) | Broader AIO3 project work | See repository |
+| [shivanshos/AIO3-BRAND](https://github.com/shivanshos/AIO3-BRAND) | Approved brand exports, masters and provenance manifests | Private |
+
+Documentation changes go to **AIO3-DOCS**. Brand masters and distributable brand files go to **AIO3-BRAND**, not to the public docs repository.
+
+### Repository structure
+
+```text
+AIO3-DOCS/
+├── docs.json            # Site configuration and navigation
+├── index.mdx            # Home page
+├── getting-started.mdx
+├── learning-paths.mdx
+├── contributing.mdx
+├── submission-guide.mdx
+├── about/               # Principles and organization
+├── curriculum/          # Course and module content
+├── mentorship/          # Mentorship approach
+├── lab/                 # Technical lab guides
+├── research/            # Research and evidence
+├── brand/               # Brand guidelines and design system
+├── brand-system/        # Brand implementation reference
+├── images/              # Images used on pages
+└── files/               # Downloadable documents (PDF)
+```
+
+### Access
+
+- **Read:** anyone can view and clone AIO3-DOCS.
+- **Write:** contributors without write access fork the repository and open a pull request from their fork.
+- **AIO3-BRAND:** request access from a maintainer. Do not copy its contents into public repositories.
+
+## Uploading documents
+
+You can add content in two ways.
+
+<Tabs>
+  <Tab title="Web editor">
+    1. Open the AIO3 documentation in the Mintlify web editor.
+    2. Create a new page in the relevant group, or open the page you want to change.
+    3. Paste or write your content, and drag images into the page.
+    4. Publish or open a pull request for review. Do not publish unreviewed changes directly.
+  </Tab>
+  <Tab title="GitHub">
+    1. Open an issue or discussion describing the intended change.
+    2. Clone the repository and create a branch:
+       ```bash
+       git clone https://github.com/shivanshos/AIO3-DOCS.git
+       cd AIO3-DOCS
+       git checkout -b docs/short-description
+       ```
+    3. Add or edit `.mdx` files, and put images in the `images/` folder.
+    4. Add new pages to `docs.json` navigation.
+    5. Preview locally:
+       ```bash
+       npm i -g mint
+       mint dev
+       ```
+    6. Commit, push and open a pull request for review before merging.
+  </Tab>
+</Tabs>
+
+### Converting existing documents
+
+Word, Google Docs and PDF files are not published as-is. Convert them to MDX pages:
+
+- Copy the text into a new `.mdx` page and rebuild headings with `##` and `###`.
+- Recreate tables with Markdown table syntax.
+- Export embedded images as separate files and place them in `images/`.
+- Attach the original file only when readers need to download it (see [File specifications](#file-specifications)).
+- Remove tracked changes, comments, author metadata and personal data before converting.
+
+### Adding images and files to a page
+
+Reference files with root-relative paths:
+
+```mdx
+![Terminal showing a successful git clone](/images/lab-terminal-setup.png)
+
+[Download the workshop brochure (PDF)](/files/workshop-brochure.pdf)
+```
+
+To add a caption or border, wrap the image in a frame:
+
+```mdx
+<Frame caption="Expected output after running mint dev">
+  <img src="/images/mint-dev-preview.png" alt="Local preview running in a browser" />
+</Frame>
+```
+
+## Git conventions
+
+### Branch names
+
+Use a type prefix and a short kebab-case description:
+
+| Prefix | Use for | Example |
+| --- | --- | --- |
+| `docs/` | New or updated content | `docs/lab-git-basics` |
+| `fix/` | Typos, broken links, corrections | `fix/curriculum-links` |
+| `brand/` | Brand and design system pages | `brand/update-color-tokens` |
+| `config/` | `docs.json` or navigation changes | `config/add-research-group` |
+
+### Commit messages
+
+Write short, imperative commit messages that describe the change:
+
+```text
+Add Git basics page to Technical Lab
+Fix broken links on Curriculum overview
+Update brand color tokens
+```
+
+Keep each commit focused on one change. Do not mix content edits with unrelated configuration changes.
+
+### Pull requests
+
+Every pull request should include:
+
+1. **Summary:** what changed and why.
+2. **Linked issue:** reference the issue or discussion, for example `Closes #12`.
+3. **Pages affected:** list new, renamed or removed pages.
+4. **Sources:** links to evidence for any factual or research claims.
+5. **Screenshots:** for visual or layout changes.
+
+At least one maintainer must review and approve before merging. Address review comments with new commits on the same branch.
+
+### Renaming or removing pages
+
+- Update every internal link that points to the old path.
+- Update or remove the entry in `docs.json`.
+- Add a redirect in `docs.json` so existing links keep working:
+  ```json
+  "redirects": [
+    { "source": "/old-path", "destination": "/new-path" }
+  ]
+  ```
+
+## Page specifications
+
+Every page must start with frontmatter:
+
+```mdx
+---
+title: "Page title"
+description: "One sentence describing what the reader will learn."
+---
+```
+
+- **File names:** lowercase, kebab-case, `.mdx` extension (for example `lab/git-basics.mdx`).
+- **Folders:** place pages in the folder matching their section: `about/`, `curriculum/`, `mentorship/`, `lab/`, `research/`, `brand/`.
+- **Navigation:** list pages in `docs.json` without the extension or leading slash (for example `lab/git-basics`).
+- **Headings:** start body content at `##`. The title already renders as the page heading.
+- **Links:** use root-relative links to other pages, such as `/lab/overview`.
+
+## File specifications
+
+| Type | Format | Location |
+| --- | --- | --- |
+| Screenshots and diagrams | PNG | `images/` |
+| Photographs | WebP (or JPEG) | `images/` |
+| Animations | GIF, compressed before upload | `images/` |
+| Downloadable documents | PDF | `files/` |
+
+- Files must be smaller than **20 MB**. Host larger files externally and link to them.
+- Use descriptive kebab-case file names, such as `images/lab-terminal-setup.png`.
+- Add alt text to every image.
+- Brand imagery must follow the [Rights & Licensing](/brand/rights-and-licensing) and [Generative AI](/brand/generative-ai) guidance.
+
+## Content rules
+
+Do not upload or commit:
+
+- Secrets, API keys, tokens or passwords
+- Private learner information or personal data
+- Copyrighted third-party course material without permission
+- Private Adobe invitation links, proprietary fonts or unreviewed AI-generated artwork
+- Unverified marketing claims or research results without traceable sources (see [Research & Evidence](/research/overview))
+
+## Review checklist
+
+Before you open a pull request, confirm:
+
+- [ ] Frontmatter includes `title` and `description`
+- [ ] New pages are listed in `docs.json`
+- [ ] `mint dev` preview renders without errors
+- [ ] Links, spelling and images work
+- [ ] Content meets safety, privacy and sourcing rules
+- [ ] Renamed or removed pages have redirects
+- [ ] Pull request includes a summary, linked issue and sources
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My new page does not appear in the sidebar">
+    Check that the page is listed in `docs.json` and that the path matches the file location exactly, without `.mdx` or a leading slash.
+  </Accordion>
+
+  <Accordion title="An image does not load">
+    Confirm the file is in `images/`, the path starts with `/`, the file name case matches exactly, and the file is under 20 MB.
+  </Accordion>
+
+  <Accordion title="mint dev shows a parsing error">
+    MDX is stricter than Markdown. Close every component tag, escape `<` and `{` characters in plain text, and check that frontmatter starts and ends with `---`.
+  </Accordion>
+
+  <Accordion title="I accidentally committed a secret">
+    Revoke or rotate the secret immediately, then tell a maintainer. Removing it in a later commit does not remove it from Git history.
+  </Accordion>
+</AccordionGroup>
