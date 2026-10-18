@@ -1,0 +1,43 @@
+---
+title: "Graphic Assets and Photo Treatments"
+---
+
+# Graphic assets and photo treatments
+
+These design assets are supplied from the original AIO3 supporting package; **none replace or modify the approved A3 brandmark or wordmark**. Preserve the underlying source SVGs.
+
+## Canonical SVG collection
+
+| Asset | Intent |
+| --- | --- |
+| `bg-glow-dark.svg` | Dark hero/background |
+| `bg-glow-light.svg` | Light theme hero/background |
+| `bg-warm.svg` | Warm presentation gradient |
+| `network.svg` | Research and systems diagram motif |
+| `pattern-asterisk.svg` | Sparse signature visual texture |
+| `pattern-contour.svg` | Delicate contour motif |
+| `pattern-dots.svg` | Dot field |
+| `pattern-grid.svg` | Structured learning grid |
+| `filters.svg` | SVG photo filter definitions; not a standalone visible illustration |
+
+The graphics were also staged in Adobe Creative Cloud Files. PNG previews for eight visible graphics are packaged for manual Firefly Board import because the board editor accepts images rather than SVG filter definitions.
+
+## Photography standards
+
+Subjects are real students, mentors, labs, notebooks and campuses, captured candidly with daylight and shallow depth of field. Use a natural warm grade and modest contrast for people, teal duotone for abstract/hero imagery, warm duotone for campaigns, and monochrome for archival/data stories.
+
+Recommended display geometry: 1:1 avatars and tiles, 4:3 cards, 3:2 editorial, 16:9 hero and video. Use radius 16 for cards or 24 for hero, shadow level 2, and optional caption scrim.
+
+**Avoid:** saturated colours outside the brand palette; heavy filters on faces; text over busy imagery without a scrim; more than one pattern per surface.
+
+## CSS classes
+
+Source implementation: `supporting/photo-styles.css`. Classes: `aio3-photo`, `aio3-photo--natural`, `aio3-photo--duotone-teal`, `aio3-photo--duotone-warm`, `aio3-photo--mono`, `aio3-photo--scrim`, `aio3-photo--tint`, and the `aio3-photo--r-*` ratios.
+
+Photo duotones depend on the SVG filter IDs supplied in `filters.svg`. Include filter definitions in the same HTML document or verify the external SVG filter URL behavior in the target browser before production.
+
+## Production governance
+
+Use approved vector art for AIO3 logos and separately typeset licensed fonts. Do not represent generated workshop concepts as real learners. Obtain appropriate consent for any identifiable minor. Check contrast, output dimensions, mobile crops, alt text and source rights before deployment.
+
+[Open the AIO3 Master Remix board](https://firefly.adobe.com/boards/id/urn:aaid:sc:AP:9e311f38-6002-4d3e-a13b-f7aff437cc9f).
