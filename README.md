@@ -13,14 +13,15 @@ This is the dedicated Mintlify documentation repository. The separate project re
 - Operations, agentic automation, technical lab and knowledge architecture
 - Research, evidence validation, safeguarding and decision governance
 
-See [docs.json](docs.json) for the complete published navigation.
+See [the active configuration](home/shivansh/AIO3/AIO3-DOCS/docs.json) for published navigation and [deployment guidance](DEPLOYMENT.md) for source ownership. The root library is preserved staging/reference material.
 
 ## Run locally
 
-Install the Mintlify CLI and run from the repository root:
+Install the Mintlify CLI and run from the configured content directory:
 
 ```bash
 npm install -g mint
+cd home/shivansh/AIO3/AIO3-DOCS
 mint dev
 ```
 
@@ -28,7 +29,7 @@ Consult [Mintlify documentation](https://mintlify.com/docs) for CLI requirements
 
 ## Publish
 
-Connect this GitHub repository (branch `main`) through the [Mintlify dashboard](https://dashboard.mintlify.com). Review the preview and permissions before deploying. Domain setup, if required, follows after deployment verification.
+The connected deployment uses `main` and content directory `home/shivansh/AIO3/AIO3-DOCS`. See [deployment guidance](DEPLOYMENT.md) before changing the Git source or merging.
 
 ## Editorial status
 
