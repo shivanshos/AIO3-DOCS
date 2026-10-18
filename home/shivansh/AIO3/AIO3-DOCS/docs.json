@@ -1,0 +1,103 @@
+{
+  "theme": "mint",
+  "name": "AIO3 Docs",
+  "description": "AIO3 learning, curriculum, research, mentorship, and technical lab documentation.",
+  "colors": {
+    "primary": "#262626",
+    "light": "#525252",
+    "dark": "#D4D4D4"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "navbar": {
+    "links": [
+      {
+        "href": "https://github.com/shivanshos/AIO3-DOCS",
+        "label": "GitHub"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "AIO3 Core",
+      "href": "https://github.com/shivanshos/AIO3-Core"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/shivanshos/AIO3-DOCS"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Start Here",
+        "pages": [
+          "index",
+          "getting-started",
+          "about/principles"
+        ]
+      },
+      {
+        "group": "Learning",
+        "pages": [
+          "learning-paths",
+          "curriculum/overview",
+          "mentorship/approach"
+        ]
+      },
+      {
+        "group": "Technical Lab",
+        "pages": [
+          "lab/overview"
+        ]
+      },
+      {
+        "group": "Research & Collaboration",
+        "pages": [
+          "research/overview",
+          "contributing"
+        ]
+      },
+      {
+        "group": "Brand & Design System",
+        "pages": [
+          "brand/overview",
+          "brand/logo",
+          "brand/colors",
+          "brand/typography",
+          "brand/components",
+          "brand/imagery",
+          "brand/motion",
+          "brand-system/overview",
+          "brand-system/identity",
+          "brand-system/colors",
+          "brand-system/typography",
+          "brand-system/components",
+          "brand/identity",
+          "brand/visual-language",
+          "brand/layout",
+          "brand/accessibility",
+          "brand/applications",
+          "brand/governance",
+          "brand/asset-production"
+        ]
+      },
+      {
+        "group": "Brand System",
+        "pages": []
+      }
+    ]
+  }
+}

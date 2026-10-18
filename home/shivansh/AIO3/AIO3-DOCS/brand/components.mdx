@@ -1,0 +1,30 @@
+---
+title: "Components & UI"
+description: "Buttons, cards, composer and reusable application patterns."
+---
+
+## Principles
+Functional clarity outranks spectacle. AIO3 components should feel premium because they are predictable, readable and grounded in the brand tokens.
+
+### Core component catalogue
+
+| Family | Required states | Notes |
+|---|---|---|
+| Button | Primary, secondary, tertiary; small/medium/large; hover, focus, disabled, loading | 8 px corners by default |
+| Input and select | Default, active, invalid, disabled | Labels visible; helpful errors |
+| Prompt composer | Idle, typing, submitting, streaming, failure | Always disclose generated content |
+| Answer / learning card | Empty, loading, answered, sourced, error | Source chips, revision and uncertainty |
+| Sidebar | Expanded 256 px, collapsed 72 px | Preserve keyboard access |
+| Course / module card | Draft, active, completed, locked | Never infer learner competency from appearance alone |
+| Mentor / experiment panel | Queued, running, reviewed | Distinguish verified result from experiment |
+
+### Shape, icon and elevation
+Corner scales: 0, 4, 8, 12, 16, 24 px, and pill. Use 8 px for controls, 16 px for cards, 24 px for prominent hero containers. Icon family uses a **32 px grid and 2 px round stroke**; keep icons semantically meaningful.
+
+Elevation 0–3, maximum; use the supplied two-layer shadow tokens rather than heavy floating material.
+
+### Accessibility
+All interactive elements must have visible focus, accessible names, hit targets appropriate for touch, readable error messages and keyboard functionality. Loading/streaming feedback should not trap focus or cause layout jumps.
+
+### Next implementation
+Token-powered React components and Storybook stories are an implementation target, not a claim that packages are already published. The previous ZIP contains design examples; version, test and build packages before publishing.

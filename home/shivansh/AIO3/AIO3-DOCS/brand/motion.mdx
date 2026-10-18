@@ -1,0 +1,28 @@
+---
+title: "Motion, Shape & Effects"
+description: "Rhythm, focus behaviour, elevations and reduced-motion rules."
+---
+
+## Motion tokens
+
+| Token | Duration | Intended usage |
+|---|---:|---|
+| Instant | 100 ms | Minor feedback |
+| Fast | 160 ms | Hover and focus changes |
+| Base | 240 ms | Cards and controls |
+| Slow | 400 ms | Panels and transitions |
+| Stream | 600 ms | Informational progress |
+
+### Easing
+- Standard: `cubic-bezier(.2,0,0,1)`
+- In: `cubic-bezier(.32,0,.67,0)`
+- Out: `cubic-bezier(.33,1,.68,1)`
+- Spring: `cubic-bezier(.34,1.56,.64,1)`
+
+Use animation to clarify change of state, hierarchy or causal connection—not to make static content seem busy. Sidebar expansion can use the documented 256 px ↔ 72 px range. Avoid infinite glow pulses, artificial particle storms and unannounced parallax.
+
+### Accessibility
+Respect `prefers-reduced-motion: reduce`: switch nonessential animation off and keep state changes legible without movement. Avoid sudden large-area flashing.
+
+### Surface treatments
+Elevation levels 0–3 only. Dark mode can use denser shadows, but controls must remain visibly bounded. Focus indicators need >=3:1 contrast against adjacent colours.
