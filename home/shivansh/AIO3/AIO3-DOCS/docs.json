@@ -3,15 +3,10 @@
   "name": "AIO3 Docs",
   "description": "AIO3 learning, curriculum, research, mentorship, and technical lab documentation.",
   "colors": {
-    "primary": "#262626",
-    "light": "#525252",
-    "dark": "#D4D4D4"
+    "primary": "#20808D",
+    "light": "#20808D",
+    "dark": "#20B8CD"
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "favicon": "/favicon.svg",
   "navbar": {
     "links": [
       {
@@ -80,11 +75,6 @@
           "brand/components",
           "brand/imagery",
           "brand/motion",
-          "brand-system/overview",
-          "brand-system/identity",
-          "brand-system/colors",
-          "brand-system/typography",
-          "brand-system/components",
           "brand/identity",
           "brand/visual-language",
           "brand/layout",
@@ -95,9 +85,16 @@
         ]
       },
       {
-        "group": "Brand System",
-        "pages": []
+        "group": "Brand implementation reference",
+        "pages": [
+          "brand-system/overview",
+          "brand-system/identity",
+          "brand-system/colors",
+          "brand-system/typography",
+          "brand-system/components"
+        ]
       }
     ]
-  }
+  },
+  "$schema": "https://mintlify.com/docs.json"
 }
