@@ -123,6 +123,10 @@
           "brand-system/typography",
           "brand-system/components"
         ]
+      },
+      {
+        "group": "ShivanshOS Brand System",
+        "pages": []
       }
     ]
   },
