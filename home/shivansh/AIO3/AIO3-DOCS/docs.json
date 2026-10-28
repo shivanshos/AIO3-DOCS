@@ -126,7 +126,20 @@
       },
       {
         "group": "ShivanshOS Brand System",
-        "pages": []
+        "pages": [
+          "shivanshos/foundations",
+          "shivanshos/architecture",
+          "shivanshos/logo-system",
+          "shivanshos/construction",
+          "shivanshos/color",
+          "shivanshos/accessibility",
+          "shivanshos/typography",
+          "shivanshos/layout",
+          "shivanshos/voice",
+          "shivanshos/applications",
+          "shivanshos/asset-handoff",
+          "shivanshos/governance"
+        ]
       }
     ]
   },
