@@ -1,0 +1,24 @@
+---
+title: "Accessibility"
+description: "Contrast depends on foreground, background, size and weight. The values below are calculated from the supplied sRGB hex colors. Assess the actual rendered component, including overlays and focus states."
+---
+
+# Contrast is a pairing.
+
+Contrast depends on foreground, background, size and weight. The values below are calculated from the supplied sRGB hex colors. Assess the actual rendered component, including overlays and focus states.
+
+## Readable combinations
+
+Ink / Paper is approximately 16.3:1. Paper / Charcoal is approximately 13.1:1. Neutral / Ink is approximately 7.7:1. These are appropriate starting points for body text.
+
+## Accent combinations
+
+Energy / Paper is approximately 3.5:1 and fails the 4.5:1 normal-text threshold. Energy Deep / Paper is approximately 4.9:1. Neutral / Paper is approximately 2.1:1 and is unsuitable for readable text.
+
+## Interactive rules
+
+Target WCAG AA: 4.5:1 for normal text and 3:1 for large text; relevant controls and graphics need 3:1 against adjacent colors. Keep keyboard focus visible, label downloads and give informative images meaningful alt text.
+
+## Practical checks
+
+Test dark and light states, keyboard navigation, 200% zoom and narrow screens. Do not encode asset status in color alone. Avoid motion that obstructs reading and honor reduced-motion preferences.
